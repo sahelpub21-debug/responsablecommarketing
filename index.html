@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zakaria Gallouch - Candidature Responsable Communication & Marketing</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 15s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5em;
+            font-weight: bold;
+            color: white;
+            border: 5px solid rgba(255,255,255,0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header .subtitle {
+            font-size: 1.3em;
+            opacity: 0.95;
+            font-weight: 300;
+            position: relative;
+            z-index: 1;
+        }
+
+        .company-tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 20px;
+            border-radius: 20px;
+            margin-top: 15px;
+            font-size: 0.9em;
+            backdrop-filter: blur(10px);
+        }
+
+        .content {
+            padding: 50px 40px;
+        }
+
+        .intro {
+            font-size: 1.15em;
+            color: #555;
+            margin-bottom: 40px;
+            line-height: 1.9;
+            text-align: justify;
+        }
+
+        .intro strong {
+            color: #1e3c72;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #1e3c72;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            display: inline-block;
+        }
+
+        .highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .highlight-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 25px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            border-left: 4px solid #667eea;
+        }
+
+        .highlight-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .highlight-card h3 {
+            color: #1e3c72;
+            font-size: 1.2em;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+
+        .highlight-card h3::before {
+            content: '▸';
+            color: #667eea;
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+
+        .highlight-card p {
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+
+        .experience-item {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border-left: 4px solid #764ba2;
+            transition: all 0.3s ease;
+        }
+
+        .experience-item:hover {
+            background: #fff;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .experience-item h3 {
+            color: #1e3c72;
+            font-size: 1.3em;
+            margin-bottom: 8px;
+        }
+
+        .experience-item .meta {
+            color: #667eea;
+            font-size: 0.95em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .experience-item ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .experience-item li {
+            padding-left: 25px;
+            margin-bottom: 10px;
+            position: relative;
+            color: #555;
+        }
+
+        .experience-item li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .skill-tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+            text-align: center;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .cta {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .cta h3 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1em;
+        }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .highlights {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-image {
+                width: 120px;
+                height: 120px;
+                font-size: 2.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="profile-image">ZG</div>
+            <h1>ZAKARIA GALLOUCH</h1>
+            <p class="subtitle">Responsable Communication & Marketing</p>
+            <div class="company-tag">Candidature INDUSTRICOM GROUP</div>
+        </div>
+
+        <div class="content">
+            <div class="intro">
+                Avec <strong>10 années d'expérience</strong> dans la communication stratégique et le marketing, j'ai développé une expertise solide au sein d'<strong>agences de relations presse</strong>, de <strong>médias spécialisés</strong> et d'environnements corporate exigeants. Mon parcours m'a permis d'accompagner <strong>plus de 30 marques et institutions</strong> dans leurs stratégies de communication 360°, combinant planning stratégique, relations publiques, production de contenus et gestion d'événements.
+                <br><br>
+                Pendant <strong>2 ans chez CIO Mag</strong>, média de référence en transformation digitale, j'ai occupé le rôle de <strong>correspondant médias et stratège éditorial</strong>, où j'ai créé et développé plusieurs concepts de contenu sponsorisés par des partenaires institutionnels et corporate. J'ai piloté la production audiovisuelle (incluant la réalisation du documentaire <em>"Horizon Digital"</em>), géré la couverture éditoriale panafricaine, et coordonné de bout en bout la communication événementielle des Assises de la Transformation Digitale en Afrique (ATDA). Cette expérience m'a donné une compréhension fine des enjeux des médias spécialisés B2B et de la création de valeur à travers des contenus premium.
+                <br><br>
+                En amont, j'ai passé <strong>6 ans en agence de relations presse et affaires publiques</strong> (Strateus Group / PR Media, Com' Par Magie), où j'ai géré des comptes corporate stratégiques tels que <strong>Tanger Med, Visa, Dell Technologies, Spotify, LG Electronics et Téléperformance</strong>. J'y ai développé une approche méthodique du planning stratégique, de la conception de messages, de la gestion de campagnes RP multicanales, et du pilotage de la performance (couverture, part de voix, réputation).
+                <br><br>
+                Plus récemment, en tant que <strong>Head of Communications</strong> pour une start-up SportTech, j'ai piloté l'ensemble de la stratégie de communication et marketing, du positionnement de marque aux campagnes d'acquisition digitales, en passant par les relations presse (PR value de 300 000 € générée). Cette expérience a renforcé ma capacité à déployer des dispositifs 360° performants et à gérer des équipes et des agences externes dans des environnements agiles.
+                <br><br>
+                Je suis convaincu que mon profil hybride — <strong>expertise médias, maîtrise des RP corporate, et compétences en marketing digital et événementiel</strong> — correspond parfaitement aux exigences du poste de <strong>Responsable Communication et Marketing chez INDUSTRICOM GROUP</strong>.
+            </div>
+
+            <div class="section">
+                <h2>Pourquoi INDUSTRICOM GROUP ?</h2>
+                <div class="highlights">
+                    <div class="highlight-card">
+                        <h3>Expérience médias spécialisés</h3>
+                        <p>Mon expérience de 2 ans chez CIO Mag m'a permis de maîtriser les codes des médias B2B : création de concepts éditoriaux sponsorisés, production multi-formats (articles, vidéos, documentaires), et activation de partenariats avec des annonceurs corporate et institutionnels.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <h3>Expertise RP & comptes stratégiques</h3>
+                        <p>6 ans en agence RP avec la gestion de comptes corporate de premier plan (Tanger Med, Visa, Dell Technologies, Téléperformance). Expertise en conception de stratégies de communication, relations médias, gestion de crise et affaires publiques.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <h3>Vision 360° et exécution</h3>
+                        <p>Capacité à piloter des stratégies de communication complètes : campagnes RP, marketing digital, événementiel, production de contenus et mesure de performance. Expérience confirmée en coordination d'équipes internes et d'agences partenaires.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Expériences clés alignées avec vos besoins</h2>
+                
+                <div class="experience-item">
+                    <h3>Correspondant Médias & Stratégie Éditoriale - CIO Mag / ATDA</h3>
+                    <div class="meta">2020 - 2022 | Casablanca</div>
+                    <ul>
+                        <li>Couverture éditoriale panafricaine sur la transformation digitale et l'innovation</li>
+                        <li>Création et développement de concepts de contenu sponsorisés (rubriques partenaires, tribunes, rapports thématiques)</li>
+                        <li>Rédaction de 60+ articles et interviews de dirigeants et décideurs tech</li>
+                        <li>Production audiovisuelle : réalisation du documentaire "Horizon Digital" (coordination production et post-production)</li>
+                        <li>Gestion de bout en bout de la communication événementielle des ATDA (Assises de la Transformation Digitale en Afrique)</li>
+                        <li>Activations LinkedIn et valorisation de contenus auprès des partenaires et sponsors</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Account Manager & Lead Contenu - Strateus Group / PR Media</h3>
+                    <div class="meta">Janvier 2017 - Janvier 2020 | Casablanca</div>
+                    <ul>
+                        <li>Gestion de portefeuille clients corporate : Tanger Med, Visa, Dell Technologies, Spotify, LG Electronics, Téléperformance</li>
+                        <li>Planning stratégique et conception de messages pour des campagnes RP et affaires publiques</li>
+                        <li>Pilotage de projets RP : dossiers de presse, relations médias, prises de parole, conférences</li>
+                        <li>Coordination social media, production de contenus et mesure de performance (couverture médias, part de voix, réputation)</li>
+                        <li>Gestion de la relation client et recommandations stratégiques d'optimisation</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Chef de Projet Communication 360 - Com' Par Magie</h3>
+                    <div class="meta">2013 - 2017 | Casablanca</div>
+                    <ul>
+                        <li>Conception et pilotage de dispositifs de communication 360° (corporate et produits)</li>
+                        <li>Gestion de comptes : LG, CNSS, Majorel Africa, CEED Network</li>
+                        <li>Production de contenus web et social, campaign management et suivi de performance</li>
+                        <li>Coordination de la production créative et des campagnes publicitaires</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Head of Communications - Fan4All (Start-up SportTech)</h3>
+                    <div class="meta">Février 2022 - Février 2025 | Casablanca</div>
+                    <ul>
+                        <li>Pilotage de la stratégie de marque, contenus et relations publiques</li>
+                        <li>Lancement RP : génération de 300 000 € de PR value pour une start-up en phase early-stage</li>
+                        <li>Campagnes de communication 360° (owned, paid, RP) avec reporting mensuel (trafic, engagement, conversion)</li>
+                        <li>Coordination d'équipes internes et de partenaires externes (agences, freelances)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Compétences stratégiques & opérationnelles</h2>
+                <div class="skills-grid">
+                    <div class="skill-tag">Planning Stratégique RP</div>
+                    <div class="skill-tag">Relations Presse & Médias</div>
+                    <div class="skill-tag">Marketing Digital & Social Media</div>
+                    <div class="skill-tag">Content Marketing & Brand Content</div>
+                    <div class="skill-tag">Production Audiovisuelle</div>
+                    <div class="skill-tag">Communication Événementielle</div>
+                    <div class="skill-tag">Analytics & Performance</div>
+                    <div class="skill-tag">Gestion d'Équipes & Agences</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Outils maîtrisés</h2>
+                <div class="skills-grid">
+                    <div class="skill-tag">HubSpot (certifié Marketing & CRM)</div>
+                    <div class="skill-tag">Google Analytics & Search Console</div>
+                    <div class="skill-tag">Canva / Hootsuite / Buffer / Publer</div>
+                    <div class="skill-tag">Mailchimp / Brevo</div>
+                    <div class="skill-tag">WordPress & CMS</div>
+                    <div class="skill-tag">Tableaux de bord KPI & Reporting</div>
+                </div>
+            </div>
+
+            <div class="cta">
+                <h3>Discutons de votre vision pour INDUSTRICOM GROUP</h3>
+                <p style="margin-bottom: 20px;">Je serais ravi d'échanger sur la manière dont mon expérience en médias spécialisés, RP corporate et communication stratégique peut contribuer au développement et au rayonnement de votre groupe.</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span>📧</span>
+                        <a href="mailto:ga.zakaria@gmail.com">ga.zakaria@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <span>📱</span>
+                        <a href="https://wa.me/212627056916">+212 627 056 916</a>
+                    </div>
+                    <div class="contact-item">
+                        <span>🔗</span>
+                        <a href="https://linkedin.com/in/zakaria-gallouch" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
