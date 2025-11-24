@@ -111,6 +111,8 @@
             text-decoration: none;
             transition: all 0.3s ease;
             box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 10;
         }
 
         .cv-download:hover {
@@ -153,6 +155,45 @@
 
         .intro strong {
             color: #1e3c72;
+        }
+
+        .insights-dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+            padding: 30px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 15px;
+            border: 2px solid #667eea;
+        }
+
+        .insight-box {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .insight-box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.2);
+        }
+
+        .insight-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 8px;
+        }
+
+        .insight-label {
+            font-size: 0.9em;
+            color: #555;
+            font-weight: 600;
+            line-height: 1.4;
         }
 
         .section {
@@ -345,16 +386,44 @@
             </div>
             <h1>ZAKARIA GALLOUCH</h1>
             <p class="subtitle">Candidature au poste Responsable Marketing et Communication - GROUPE LE MATIN</p>
-            <div style="display: flex; gap: 15px; justify-content: center; margin-top: 20px; flex-wrap: wrap;">
+            <div style="display: flex; gap: 15px; justify-content: center; margin-top: 20px; flex-wrap: wrap; position: relative; z-index: 10;">
                 <a href="https://sahelpub21-debug.github.io/Comms_Mkg_Manager/" class="cv-download" target="_blank">📄 CV</a>
-                <a href="https://zakariagallouch.my.canva.site/" class="cv-download" target="_blank">💼 Portfolio</a>
+                <a href="https://yti.my.canva.site/zg-portfolio" class="cv-download" target="_blank">💼 Portfolio</a>
             </div>
         </div>
 
         <div class="content">
             <div class="intro">
                 Avec <strong>10 années d'expérience</strong> en marketing, communication stratégique et gestion de projets cross-fonctionnels, j'ai développé des compétences solides au sein de <strong>médias spécialisés</strong>, d'<strong>environnements tech orientés performance</strong> et d'<strong>agences de communication</strong>. Mon parcours m'a permis d'accompagner <strong>plus de 30 marques et institutions</strong> dans leurs stratégies marketing 360°, combinant acquisition digitale, monétisation d'audiences, création de contenus premium et gestion d'équipes.
-                <br><br>
+
+                <div class="insights-dashboard">
+                    <div class="insight-box">
+                        <div class="insight-number">10</div>
+                        <div class="insight-label">Années d'expérience</div>
+                    </div>
+                    <div class="insight-box">
+                        <div class="insight-number">30+</div>
+                        <div class="insight-label">Marques accompagnées</div>
+                    </div>
+                    <div class="insight-box">
+                        <div class="insight-number">3</div>
+                        <div class="insight-label">Secteurs d'activité<br>(Média, Tech, Agence)</div>
+                    </div>
+                    <div class="insight-box">
+                        <div class="insight-number">+10M€</div>
+                        <div class="insight-label">PR Value générée</div>
+                    </div>
+                    <div class="insight-box">
+                        <div class="insight-number">+20</div>
+                        <div class="insight-label">Campagnes gérées</div>
+                    </div>
+                    <div class="insight-box">
+                        <div class="insight-number">60+</div>
+                        <div class="insight-label">Articles & interviews<br>(CIO Mag)</div>
+                    </div>
+                </div>
+                
+                <br>
                 En tant que <strong>Head of Communications pour Fan4All</strong>, plateforme e-commerce SportTech, j'ai piloté pendant 3 ans l'ensemble de la stratégie marketing et communication, du positionnement de marque aux campagnes d'acquisition et de conversion. J'ai déployé des <strong>dispositifs 360° orientés performance</strong> (owned, paid, RP), avec mise en place de tableaux de bord mensuels pour suivre le trafic, l'engagement, les conversions et le ROI. Cette expérience m'a permis de maîtriser les enjeux de <strong>développement d'offres d'abonnement</strong>, d'optimisation de parcours clients et de génération de leads dans un environnement agile nécessitant une forte coordination entre équipes internes et partenaires externes. J'ai également généré <strong>300 000 € de PR value</strong> lors de la phase de lancement, démontrant ma capacité à combiner marketing de performance et relations publiques stratégiques.
                 <br><br>
                 Auparavant, j'ai passé <strong>2 ans chez CIO Mag</strong>, média de référence en transformation digitale, où j'ai occupé le rôle de <strong>correspondant médias et stratège éditorial</strong>. J'y ai créé et développé plusieurs <strong>concepts de contenu sponsorisés</strong> destinés à être monétisés par des partenaires institutionnels et corporate, combinant ainsi compétences éditoriales et <strong>sales marketing</strong>. J'ai piloté la production audiovisuelle complète (incluant la réalisation du documentaire <em>"Horizon Digital"</em>), géré la couverture éditoriale panafricaine, et coordonné de bout en bout la communication événementielle des Assises de la Transformation Digitale en Afrique (ATDA). Cette expérience m'a donné une compréhension fine des <strong>enjeux des médias B2B</strong>, de la valorisation d'audiences et de la création de valeur à travers des contenus premium.
@@ -474,7 +543,7 @@
                 <p style="margin-bottom: 20px;">Je serais ravi d'échanger sur la manière dont mon expérience en marketing de performance, valorisation d'audiences et gestion de projets stratégiques peut accompagner les ambitions de croissance et d'innovation du Groupe Le Matin.</p>
                 <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
                     <a href="https://sahelpub21-debug.github.io/Comms_Mkg_Manager/" class="cv-download-cta" target="_blank">📄 CV</a>
-                    <a href="https://zakariagallouch.my.canva.site/" class="cv-download-cta" target="_blank">💼 Portfolio</a>
+                    <a href="https://yti.my.canva.site/zg-portfolio" class="cv-download-cta" target="_blank">💼 Portfolio</a>
                 </div>
                 <div class="contact-info">
                     <div class="contact-item">
